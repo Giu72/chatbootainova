@@ -7,7 +7,7 @@ import time
 # 1. Configurazione pagina
 # ---------------------------
 st.set_page_config(page_title="Ai_Nova", page_icon="logo.png")
-st.title("⚡ Sportello Speed: il tuo consulente per diritti e sussidi")
+st.title("🤖 Ai_Nova: il tuo consulente per diritti e sussidi")
 st.markdown("Hai dubbi su NASpI, ADI, Legge di Bilancio 2026 o altre pratiche INPS? Chiedi pure: ti guido io, passo passo.")
 
 # ---------------------------
