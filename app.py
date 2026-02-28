@@ -6,7 +6,7 @@ import time
 # ---------------------------
 # 1. Configurazione pagina
 # ---------------------------
-st.set_page_config(page_title="Sportello Speed - Assistente Digitale", page_icon="⚡")
+st.set_page_config(page_title="Ai_Nova", page_icon="logo.png")
 st.title("⚡ Sportello Speed: il tuo consulente per diritti e sussidi")
 st.markdown("Hai dubbi su NASpI, ADI, Legge di Bilancio 2026 o altre pratiche INPS? Chiedi pure: ti guido io, passo passo.")
 
@@ -40,10 +40,10 @@ for msg in st.session_state.messages:
 # ---------------------------
 if prompt := st.chat_input("Scrivi qui la tua domanda..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
+    with st.chat_message("user", avatar="👤"):
         st.markdown(prompt)
 
-    with st.chat_message("assistant"):
+   with st.chat_message("assistant", avatar="logo.png"):
         with st.spinner("Sto verificando le fonti ufficiali..."):
             try:
                 # ------------------------------------------------------------
