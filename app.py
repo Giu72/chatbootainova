@@ -43,7 +43,7 @@ if prompt := st.chat_input("Scrivi qui la tua domanda..."):
     with st.chat_message("user", avatar="👤"):
         st.markdown(prompt)
 
-   with st.chat_message("assistant", avatar="logo.png"):
+    with st.chat_message("assistant", avatar="logo.png"):   # <-- INDENTAZIONE CORRETTA (4 spazi)
         with st.spinner("Sto verificando le fonti ufficiali..."):
             try:
                 # ------------------------------------------------------------
