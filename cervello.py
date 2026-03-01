@@ -30,7 +30,7 @@ def carica_link(urls):
             print(f"Errore nel caricamento di {url}: {e}")
     return contenuto
 
-# I tuoi link (rimossi gli spazi iniziali)
+# I tuoi link
 links = [
     "https://www.inps.it/it/it/sostegni-sussidi-indennita.html",
     "https://www.inps.it/it/it/sostegni-sussidi-indennita/per-disoccupati.html",
@@ -44,8 +44,8 @@ links = [
     "https://www.inps.it/it/it/lavoro/contributi-dipendenti-e-collaboratori.html"
 ]
 
-# Carica tutto una volta sola (utile per l'uso in app.py)
 print("Caricamento documenti in corso...")
-testo_pdf = carica_pdf("Legge_bilancio2026.pdf")testo_web = carica_link(links)
+testo_pdf = carica_pdf("Legge_bilancio2026.pdf")   # <-- NOME CORRETTO
+testo_web = carica_link(links)
 testo_totale = testo_pdf + "\n\n" + testo_web
 print("Caricamento completato!")
