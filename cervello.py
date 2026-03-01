@@ -46,7 +46,6 @@ links = [
 
 # Carica tutto una volta sola (utile per l'uso in app.py)
 print("Caricamento documenti in corso...")
-testo_pdf = carica_pdf("bilancio_2026.pdf")
-testo_web = carica_link(links)
+testo_pdf = carica_pdf("Legge_bilancio2026.pdf")testo_web = carica_link(links)
 testo_totale = testo_pdf + "\n\n" + testo_web
 print("Caricamento completato!")
