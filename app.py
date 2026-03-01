@@ -7,7 +7,8 @@ import time
 # 1. Configurazione pagina
 # ---------------------------
 st.set_page_config(page_title="Ai_Nova", page_icon="logo.png")
-st.title("🤖 Ai_Nova: il tuo consulente per diritti e sussidi")
+st.image("logo.png", width=80)  # Mostra il logo anche sopra il titolo (opzionale, puoi rimuovere se preferisci)
+st.title("🤖 Ai_Nova: il tuo assistente per diritti e sussidi")
 st.markdown("Hai dubbi su NASpI, ADI, Legge di Bilancio 2026 o altre pratiche INPS? Chiedi pure: ti guido io, passo passo.")
 
 # ---------------------------
@@ -43,14 +44,14 @@ if prompt := st.chat_input("Scrivi qui la tua domanda..."):
     with st.chat_message("user", avatar="👤"):
         st.markdown(prompt)
 
-    with st.chat_message("assistant", avatar="logo.png"):   # <-- INDENTAZIONE CORRETTA (4 spazi)
+    with st.chat_message("assistant", avatar="logo.png"):
         with st.spinner("Sto verificando le fonti ufficiali..."):
             try:
                 # ------------------------------------------------------------
-                # NUOVO PROMPT stile Sportello Speed (modello C.R.A.F.T.)
+                # PROMPT stile Ai_Nova (ex Sportello Speed)
                 # ------------------------------------------------------------
                 full_prompt = f"""
-Sei un consulente esperto e rassicurante dello Sportello Speed. Il tuo compito è aiutare i cittadini a risolvere i loro problemi con la burocrazia, fornendo risposte COMPLETE, ESAUSTIVE E VERIFICATE su diritti sociali e sussidi (NASpI, ADI, INPS, Legge di Bilancio). Usa un linguaggio colloquiale e diretto, adatto a persone tra i 30 e i 65 anni, spesso poco pratiche di strumenti digitali.
+Sei un consulente esperto e rassicurante di Ai_Nova. Il tuo compito è aiutare i cittadini a risolvere i loro problemi con la burocrazia, fornendo risposte COMPLETE, ESAUSTIVE E VERIFICATE su diritti sociali e sussidi (NASpI, ADI, INPS, Legge di Bilancio). Usa un linguaggio colloquiale e diretto, adatto a persone tra i 30 e i 65 anni, spesso poco pratiche di strumenti digitali.
 
 PRIMA DI RISPONDERE:
 - Verifica le informazioni nel contesto seguente, incrociando almeno 2-3 fonti ufficiali se presenti (INPS, Agenzia delle Entrate, Gazzetta Ufficiale).
@@ -62,7 +63,7 @@ STRUTTURA OBBLIGATORIA DELLA RISPOSTA:
 2. **Spiegazione chiara e verificata** – esponi i fatti in modo semplice, citando le fonti presenti nel contesto. Evita gergo tecnico e non usare tabelle.
 3. **Procedura passo‑passo** – spiega cosa deve fare l'utente in ordine logico (es. "Prima accedi con SPID… poi clicca su…").
 4. **Sintesi operativa** – riassumi i punti chiave in 2-3 righe semplici.
-5. **Chiusura cordiale** – un messaggio finale amichevole, ricordando che lo Sportello Speed offre assistenza informativa (ma senza offrire aiuto diretto come "posso farlo io").
+5. **Chiusura cordiale** – un messaggio finale amichevole, ricordando che Ai_Nova offre assistenza informativa (ma senza offrire aiuto diretto come "posso farlo io").
 
 REGOLE IMPORTANTI:
 - Non menzionare mai il nome dell'utente.
